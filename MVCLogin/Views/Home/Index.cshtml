@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MVCLogin.Models.Product>
+    @{
+    Layout = null;
+    if (Session["Id"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h3>User Name: @Session["UserName"]</h3>
+        <img src="~/Images/Fossil.jpg" height="100" />
+        <img src="~/Images/Apple.jpg" height="100"/>
+        <img src="~/Images/echo.jpg" height="100"/>
+        <img src="~/Images/Samsung.jpg" height="100" />
+        <h4><a href="@Url.Action("Logout", "Login")">Logout</a></h4>
+    </div>
+</body>
+</html>
+
