@@ -9,7 +9,7 @@ namespace MVCLogin.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+        // GET: HomeS,,,
         public ActionResult Display()
         {
             return View();
